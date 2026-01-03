@@ -1,49 +1,332 @@
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-center gap-8 py-32 px-16 bg-white dark:bg-black">
-        <svg
-          viewBox="0 0 69 26"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="fill-black dark:fill-white"
-        >
-          <path d="M13.7917 24.3604C12.4622 25.3549 10.7895 25.8884 8.82032 25.8884C6.66971 25.8884 4.87412 25.3543 3.47587 24.3604H13.7917Z"></path>
-          <path d="M27.8204 24.3604C26.802 25.2894 25.534 25.8884 24.1756 25.8884C22.4188 25.8884 21.02 25.339 20.108 24.3604H27.8204Z"></path>
-          <path d="M44.5726 24.3604C43.0194 25.3511 41.0762 25.8884 38.8367 25.8884C36.5972 25.8884 34.6541 25.3511 33.1008 24.3604H44.5726Z"></path>
-          <path d="M6.10452 21.7838C6.64469 22.5408 7.32257 23.0964 8.12748 23.4234H2.40008C1.94592 22.9414 1.55318 22.3936 1.22435 21.7838H6.10452Z"></path>
-          <path d="M15.9753 21.7838C15.6457 22.3936 15.2602 22.9415 14.8213 23.4234H11.8608C12.7015 23.0973 13.4264 22.543 14.0227 21.7838H15.9753Z"></path>
-          <path d="M23.2016 21.7838C23.3205 22.5267 23.6272 23.0906 24.0875 23.4234H19.4507C19.2008 22.9377 19.0348 22.3887 18.9611 21.7838H23.2016Z"></path>
-          <path d="M29.6415 21.7838C29.3929 22.3649 29.0672 22.9198 28.6798 23.4234H26.2913C26.809 23.0921 27.2884 22.5303 27.6965 21.7838H29.6415Z"></path>
-          <path d="M34.7756 21.7838C35.1876 22.498 35.7076 23.0447 36.3327 23.4234H31.8901C31.3725 22.9406 30.9182 22.3925 30.5327 21.7838H34.7756Z"></path>
-          <path d="M47.1403 21.7838C46.7548 22.3925 46.3005 22.9406 45.7829 23.4234H41.3477C41.9765 23.0447 42.5011 22.4979 42.9178 21.7838H47.1403Z"></path>
-          <path d="M4.97293 19.2072C5.1237 19.8073 5.31836 20.3552 5.55486 20.8468H0.788749C0.585257 20.3346 0.420002 19.7875 0.293988 19.2072H4.97293Z"></path>
-          <path d="M16.9458 19.2072C16.8042 19.7876 16.6278 20.3347 16.4179 20.8468H14.6376C14.9063 20.3562 15.1356 19.8083 15.3244 19.2072H16.9458Z"></path>
-          <path d="M23.146 20.8468H18.9172V19.2072H23.146V20.8468Z"></path>
-          <path d="M33.879 19.2072C33.9937 19.8097 34.1454 20.3562 34.3337 20.8468H30.0171C30.0067 20.8251 29.9961 20.8035 29.9859 20.7817C29.9802 20.8034 29.9741 20.8251 29.9682 20.8468H28.1326C28.3289 20.3505 28.4984 19.8012 28.6354 19.2072H33.879Z"></path>
-          <path d="M48.2582 19.2072C48.1017 19.7867 47.8998 20.3339 47.6561 20.8468H43.3651C43.5558 20.3562 43.71 19.8097 43.8264 19.2072H48.2582Z"></path>
-          <path d="M4.61127 16.6306C4.63883 17.207 4.69545 17.7543 4.78 18.2703H0.128844C0.056725 17.7466 0.0134713 17.1997 0 16.6306H4.61127Z"></path>
-          <path d="M17.2781 17.2464C17.2423 17.5969 17.1958 17.9383 17.1392 18.2703H15.5758C15.6704 17.8506 15.7479 17.4096 15.8073 16.9484L17.2781 17.2464Z"></path>
-          <path d="M23.146 18.2703H18.9172V16.6306H23.146V18.2703Z"></path>
-          <path d="M33.6225 16.6306C33.6374 17.2111 33.6755 17.7576 33.7361 18.2703H28.8183C28.902 17.7493 28.9618 17.2012 28.9946 16.6306H33.6225Z"></path>
-          <path d="M48.643 16.6306C48.6191 17.199 48.5595 17.7459 48.4664 18.2703H43.9719C44.0335 17.7576 44.072 17.211 44.0873 16.6306H48.643Z"></path>
-          <path d="M23.146 6.89115H28.9193V8.56739H23.146V15.6937H18.9172V8.56739H15.8592L16.4324 14.49L14.9983 14.6762C14.0055 9.75933 13.1963 8.00865 9.8132 7.85966C6.45181 7.85968 4.61542 10.5441 4.592 15.6937H0.00268892C0.175472 9.48821 3.32011 6.14613 8.93079 6.14613C9.77653 6.14614 10.7326 6.25781 11.8725 6.51853C13.152 6.78855 14.2702 6.89115 15.697 6.89115C19.7286 6.89112 21.3074 4.20914 22.0796 0H23.146V6.89115Z"></path>
-          <path d="M38.8367 6.14613C44.6383 6.14616 48.4971 9.86614 48.6497 15.6937H44.092C44.0101 10.6034 42.1785 7.97132 38.8367 7.97128C35.5308 7.97128 33.6998 10.6034 33.618 15.6937H29.0235C29.1761 9.86611 33.0351 6.14613 38.8367 6.14613Z"></path>
-          <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M58.5142 19.14C59.5559 19.14 60.9024 19.5091 60.9532 22.5701H58.3236C57.7138 22.5701 57.3201 22.734 57.3709 23.3763C57.5233 25.2074 57.9934 25.385 58.6413 25.385C59.3145 25.385 59.937 25.18 60.2545 23.9229C60.28 23.8546 60.4706 23.8545 60.5468 23.8545C60.6103 23.8545 60.8389 23.8546 60.8135 23.9229C60.4197 25.6993 59.6702 26 58.6413 26C57.5996 26 55.9862 25.631 55.9862 22.5701C55.9862 19.4954 57.536 19.14 58.5142 19.14ZM58.5142 19.5773C57.9044 19.5773 57.4217 19.9736 57.3455 22.0917H59.5813C59.5051 19.9737 59.1367 19.5773 58.5142 19.5773Z"
-          ></path>
-          <path d="M63.258 19.2631C63.3215 19.2631 63.3342 19.4543 63.3342 19.509C63.3342 19.55 63.3216 19.7276 63.258 19.7276C62.6737 19.7276 62.7118 20.083 62.8262 20.5066C62.9913 21.1899 63.5121 22.9663 63.6137 23.4309C63.6391 23.5676 63.7662 23.5539 63.817 23.4309L65.0238 20.1786C65.0365 20.124 65.1763 20.124 65.2525 20.124C65.3287 20.124 65.4685 20.124 65.4939 20.1786L66.6625 23.4309C66.7006 23.5539 66.8404 23.5539 66.8658 23.4309L67.6661 20.5203C67.7931 20.083 67.8186 19.7276 67.2342 19.7276C67.1834 19.7276 67.1707 19.5773 67.1707 19.509C67.1707 19.427 67.1834 19.2631 67.2342 19.2631H68.9238C68.9746 19.2631 69 19.427 69 19.509C69 19.5773 68.9746 19.7276 68.9238 19.7276C68.3903 19.7276 68.2378 20.1239 68.1235 20.5339C67.9965 20.9438 66.5613 25.8484 66.5482 25.9043C66.5228 25.959 66.4339 25.959 66.3704 25.959C66.3069 25.959 66.2179 25.9317 66.2052 25.9043C66.1036 25.426 65.0619 22.6247 64.9222 22.1054C64.9095 21.9824 64.7443 21.9824 64.7062 22.1191C64.6554 22.2286 63.3347 25.8485 63.3216 25.9043C63.3089 25.959 63.2326 25.959 63.1564 25.959C63.0802 25.959 63.004 25.959 62.9786 25.9043L61.4033 20.5339C61.2763 20.0693 61.1111 19.7276 60.5649 19.7276C60.5268 19.7276 60.5014 19.591 60.5014 19.509C60.5014 19.4133 60.5268 19.2631 60.5649 19.2631H63.258Z"></path>
-          <path d="M53.2441 19.1264C54.0064 19.1264 55.2766 19.3724 55.2766 21.2718V24.5105C55.2766 24.9204 55.3275 25.3167 55.8991 25.3167C55.9499 25.3167 55.9627 25.4807 55.9627 25.549C55.9627 25.631 55.9499 25.795 55.8991 25.795H53.2823C53.2441 25.795 53.2187 25.6584 53.2187 25.5627C53.2187 25.4671 53.2314 25.3167 53.2823 25.3167C53.8666 25.3167 53.892 24.9204 53.892 24.5105V21.5178C53.892 19.9053 53.4347 19.8507 53.0536 19.8507C52.4184 19.8507 52.2024 20.3699 52.0119 20.7525V24.5105C52.0119 24.9341 52.0627 25.3167 52.6598 25.3167C52.7106 25.3167 52.7233 25.508 52.7233 25.549C52.7233 25.6037 52.6979 25.795 52.6598 25.795H49.8777C49.8269 25.795 49.8015 25.6583 49.8015 25.549C49.8015 25.4671 49.8269 25.3168 49.8777 25.3167C50.6526 25.3167 50.7034 24.9068 50.7034 24.5105V20.5476C50.7034 20.0693 50.5764 19.7413 49.8777 19.7413C49.8269 19.7413 49.8015 19.6047 49.8015 19.4954C49.8015 19.3861 49.8269 19.2631 49.8777 19.2631H51.6308C51.8213 19.2631 51.9611 19.3314 51.9992 19.673C52.0119 19.7687 52.0754 19.796 52.1389 19.7276C52.3422 19.4817 52.6598 19.1264 53.2441 19.1264Z"></path>
-          <path d="M48.0394 25.9621H46.8V24.629H48.0394V25.9621Z"></path>
-        </svg>
-        <div className="flex flex-col items-center text-center">
-          <h1 className="max-w-xs text-2xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            Ready for your first task
-          </h1>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-slate-900">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xl">&lt;/&gt;</span>
+              </div>
+              <span className="text-xl font-bold text-gray-900 dark:text-white">Tech Hub</span>
+            </div>
+            <div className="hidden md:flex space-x-8">
+              <a href="#services" className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition">Services</a>
+              <a href="#skills" className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition">Skills</a>
+              <a href="#expertise" className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition">Expertise</a>
+              <a href="#contact" className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main className="pt-20">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
+                Building Digital Solutions
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4">
+                For <span className="text-blue-600 dark:text-blue-400 font-semibold">Programmers</span> & <span className="text-purple-600 dark:text-purple-400 font-semibold">Data Analysts</span>
+              </p>
+              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
+                Expert software development, data analysis, and technical consulting services to transform your ideas into reality.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition shadow-lg hover:shadow-xl">
+                  Get Started
+                </a>
+                <a href="#services" className="px-8 py-4 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-semibold rounded-lg transition border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl">
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                Our Services
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400">
+                Comprehensive solutions for all your technical needs
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="p-8 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-xl border border-blue-200 dark:border-blue-800 hover:shadow-xl transition">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Web Development</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Full-stack web applications using modern frameworks like React, Next.js, Node.js, and more.
+                </p>
+              </div>
+
+              <div className="p-8 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-xl border border-purple-200 dark:border-purple-800 hover:shadow-xl transition">
+                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Data Analysis</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Transform raw data into actionable insights using Python, R, SQL, and advanced analytics tools.
+                </p>
+              </div>
+
+              <div className="p-8 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-xl border border-green-200 dark:border-green-800 hover:shadow-xl transition">
+                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Mobile Apps</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Native and cross-platform mobile applications for iOS and Android using React Native and Flutter.
+                </p>
+              </div>
+
+              <div className="p-8 bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 rounded-xl border border-orange-200 dark:border-orange-800 hover:shadow-xl transition">
+                <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Machine Learning</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  AI and ML solutions including predictive models, NLP, computer vision, and deep learning applications.
+                </p>
+              </div>
+
+              <div className="p-8 bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 rounded-xl border border-red-200 dark:border-red-800 hover:shadow-xl transition">
+                <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Database Design</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Scalable database architecture and optimization for SQL and NoSQL databases.
+                </p>
+              </div>
+
+              <div className="p-8 bg-gradient-to-br from-indigo-50 to-indigo-100 dark:from-indigo-900/20 dark:to-indigo-800/20 rounded-xl border border-indigo-200 dark:border-indigo-800 hover:shadow-xl transition">
+                <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Data Visualization</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Interactive dashboards and visualizations using D3.js, Tableau, Power BI, and custom solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                Technical Skills
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400">
+                Expertise across modern technologies and frameworks
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-12">
+              <div>
+                <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-6 flex items-center">
+                  <svg className="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                  Programming Languages
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {['JavaScript/TypeScript', 'Python', 'Java', 'C++', 'Go', 'Rust', 'PHP', 'Ruby'].map((skill) => (
+                    <div key={skill} className="flex items-center space-x-2 p-3 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700">
+                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                      <span className="text-gray-900 dark:text-white font-medium">{skill}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-6 flex items-center">
+                  <svg className="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                  Data Analysis Tools
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {['Python (Pandas)', 'R', 'SQL', 'Excel', 'Tableau', 'Power BI', 'Apache Spark', 'Jupyter'].map((skill) => (
+                    <div key={skill} className="flex items-center space-x-2 p-3 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700">
+                      <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
+                      <span className="text-gray-900 dark:text-white font-medium">{skill}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-green-600 dark:text-green-400 mb-6 flex items-center">
+                  <svg className="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
+                  Frameworks & Libraries
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {['React/Next.js', 'Node.js/Express', 'Django/Flask', 'Spring Boot', 'TensorFlow', 'PyTorch', 'Vue.js', 'Angular'].map((skill) => (
+                    <div key={skill} className="flex items-center space-x-2 p-3 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700">
+                      <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                      <span className="text-gray-900 dark:text-white font-medium">{skill}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-orange-600 dark:text-orange-400 mb-6 flex items-center">
+                  <svg className="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                  </svg>
+                  Databases & Cloud
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'AWS', 'Google Cloud', 'Azure', 'Docker/K8s'].map((skill) => (
+                    <div key={skill} className="flex items-center space-x-2 p-3 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700">
+                      <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
+                      <span className="text-gray-900 dark:text-white font-medium">{skill}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="expertise" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                Areas of Expertise
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400">
+                Specialized knowledge to drive your projects forward
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="p-8 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl text-white shadow-xl">
+                <h3 className="text-3xl font-bold mb-4">For Programmers</h3>
+                <ul className="space-y-3">
+                  {[
+                    'Full-stack web application development',
+                    'RESTful API design and implementation',
+                    'Microservices architecture',
+                    'DevOps and CI/CD pipelines',
+                    'Cloud infrastructure management',
+                    'Code review and optimization',
+                    'Technical documentation',
+                    'Agile/Scrum methodologies'
+                  ].map((item) => (
+                    <li key={item} className="flex items-start">
+                      <svg className="w-6 h-6 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="p-8 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl text-white shadow-xl">
+                <h3 className="text-3xl font-bold mb-4">For Data Analysts</h3>
+                <ul className="space-y-3">
+                  {[
+                    'Statistical analysis and modeling',
+                    'Data mining and ETL processes',
+                    'Business intelligence dashboards',
+                    'Predictive analytics',
+                    'A/B testing and experimentation',
+                    'Data quality and governance',
+                    'Report automation',
+                    'Machine learning integration'
+                  ].map((item) => (
+                    <li key={item} className="flex items-start">
+                      <svg className="w-6 h-6 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-purple-700">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Start Your Project?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Let&apos;s collaborate to bring your ideas to life with cutting-edge technology and data-driven insights.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="mailto:contact@techhub.com" className="px-8 py-4 bg-white hover:bg-gray-100 text-blue-600 font-semibold rounded-lg transition shadow-lg hover:shadow-xl">
+                Email Us
+              </a>
+              <a href="#services" className="px-8 py-4 bg-transparent hover:bg-white/10 text-white font-semibold rounded-lg transition border-2 border-white shadow-lg hover:shadow-xl">
+                View Services
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+              <div>
+                <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">500+</div>
+                <div className="text-gray-600 dark:text-gray-400">Projects Completed</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">50+</div>
+                <div className="text-gray-600 dark:text-gray-400">Happy Clients</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">10+</div>
+                <div className="text-gray-600 dark:text-gray-400">Years Experience</div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
+
+      <footer className="py-8 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center space-x-2 mb-4 md:mb-0">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold">&lt;/&gt;</span>
+              </div>
+              <span className="text-lg font-bold">Tech Hub</span>
+            </div>
+            <div className="text-gray-400 text-sm">
+              © {new Date().getFullYear()} Tech Hub. All rights reserved.
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
