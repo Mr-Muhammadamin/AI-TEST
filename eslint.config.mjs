@@ -12,6 +12,11 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Additional ignores for Django backend and virtual environment
+    "backend/**",
+    "backend_venv/**",
+    "*.sqlite3",
+    "db.sqlite3",
   ]),
 ]);
 
